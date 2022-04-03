@@ -51,14 +51,14 @@ int main() {
 	
 
 
-	//job* h;
-	//operacao* head;
-	//head=h->operacao;
+	
 	headList = RemoveOperacao(headList, 4);
 	headList = AterarMaq(headList, 2, 5, 6, 25);
 	media = Media(op1);
 	min = minimo(headList);
 	max = maximo(headList);
+
+
 	escreveFile(headList);
 
 

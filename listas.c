@@ -529,8 +529,8 @@ job* lerFile()
 	FILE* fj;
 	int jobCod, opCod, m, tem;
 
-	job* processo = (job*)malloc(sizeof(job));
-	job* aux = (job*)malloc(sizeof(job));
+	job* processo = NULL;
+	job* aux = NULL;
 
 	if (!processo) return NULL;	//caso não exista memória
 	if (!aux)return NULL;
@@ -540,48 +540,31 @@ job* lerFile()
 	{
 		do
 		{
-			fscanf(fj, "%d;%d;%d;%d", &jobCod, &opCod, &m, &tem);
 
-			//if (processo->cod == jobCod)	//caso os codigos de job sejam iguais, insere dentro do mesmo job as operaçoes
-			//{
-			//	if (processo->operacao->cod == opCod)		//caso o codigo da operaçao seja igual, insere a maquina e o tempo na mesma operação
-			//	{
-			//		aux = processo;
-			//		processo->operacao->MaqTemp->maquina;
-			//		processo->operacao->MaqTemp->tempo;
-			//		processo->operacao->MaqTemp->seguinte = aux->operacao->MaqTemp;
-			//	}
-			//}
-			//else
-			//{
-			//	()
-			//}
 
-			if (processo->codigo == jobCod)	//caso os codigos de job sejam iguais, insere dentro do mesmo job as operaçoes
+			if (!processo)
 			{
-				if (processo->operacao->op == opCod)		//caso o codigo da operaçao seja igual, insere a maquina e o tempo na mesma operação
-				{
-					processo->operacao = inserirMaq(processo->operacao, CriaMaquina(m, tem));
-				}
-				else
-				{
-					aux->operacao = CriaOperacao(opCod);		//cria operaçao
-					aux->operacao = inserirMaq(aux->operacao, CriaMaquina(m, tem));	//cria maquina e insere dentro da operaçao	
-					processo = InserirOperacao(processo, aux->operacao);		//insere operaçao dentro do job
-				}
+				fscanf(fj, "%d;%d;%d;%d", &jobCod, &opCod, &m, &tem);
+
+
+				processo = CriaJob(jobCod);
+				processo->operacao = CriaOperacao(opCod);
+				processo->operacao->Maq = CriaMaquina(m, tem);
 			}
-			else
+			
+			else	
 			{
+				fscanf(fj, "%d;%d;%d;%d", &jobCod, &opCod, &m, &tem);
 				aux = CriaJob(jobCod);
 				aux->operacao = CriaOperacao(opCod);
 				aux->operacao->Maq = CriaMaquina(m, tem);
-				/*aux->operacao = inserirMaq (aux->operacao,aux->operacao->Maq);
-				aux = inserirOper(processo, aux->operacao);
-				processo = insereJob(aux, processo);*/
+				processo = InserirJob(processo, aux);
+				processo = InserirOperacao(processo, aux->operacao);
+				processo->operacao = inserirMaq(processo->operacao, aux->operacao->Maq);
 
-				processo = aux;
-
+					
 			}
+			
 			if (feof(fj))//quando chegar ao final do ficheiro para de ler
 			{
 				break;
