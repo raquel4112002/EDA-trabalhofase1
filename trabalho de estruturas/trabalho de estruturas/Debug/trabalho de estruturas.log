@@ -1,18 +1,8 @@
 ﻿  Main.c
-C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\Main.c(46,37): warning C4133: 'função': tipos incompatíveis - de 'job *' para 'operacao *'
-C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\Main.c(46,42): warning C4133: 'função': tipos incompatíveis - de 'operacao *' para 'job *'
-C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\Main.c(47,37): warning C4133: 'função': tipos incompatíveis - de 'job *' para 'operacao *'
-C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\Main.c(47,42): warning C4133: 'função': tipos incompatíveis - de 'operacao *' para 'job *'
-C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\Main.c(48,37): warning C4133: 'função': tipos incompatíveis - de 'job *' para 'operacao *'
-C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\Main.c(48,42): warning C4133: 'função': tipos incompatíveis - de 'operacao *' para 'job *'
-C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\Main.c(49,37): warning C4133: 'função': tipos incompatíveis - de 'job *' para 'operacao *'
-C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\Main.c(49,42): warning C4133: 'função': tipos incompatíveis - de 'operacao *' para 'job *'
-C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\Main.c(56,36): warning C4133: 'função': tipos incompatíveis - de 'job *' para 'operacao *'
-C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\Main.c(56,40): warning C4133: '=': tipos incompatíveis - de 'operacao *' para 'job *'
-C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\Main.c(58,20): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\Main.c(55,36): warning C4133: 'função': tipos incompatíveis - de 'job *' para 'operacao *'
+C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\Main.c(55,40): warning C4133: '=': tipos incompatíveis - de 'operacao *' para 'job *'
+C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\Main.c(57,20): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
   listas.c
-C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\listas.c(108,27): warning C4028: parâmetro formal 1 diferente da declaração
-C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\listas.c(108,47): warning C4028: parâmetro formal 2 diferente da declaração
 C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\listas.c(123,32): warning C4133: '=': tipos incompatíveis - de 'operacao *' para 'opracao *'
 C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\listas.c(176,14): warning C4133: '=': tipos incompatíveis - de 'opracao *' para 'operacao *'
 C:\Users\raque\source\repos\trabalho de estruturas\trabalho de estruturas\listas.c(186,19): warning C4133: '=': tipos incompatíveis - de 'opracao *' para 'operacao *'

@@ -56,7 +56,7 @@ job* CriaJob(int codigo);
 operacao* CriaOperacao(int op);
 Maq* CriaMaquina(int maq, int tp);
 job* InserirJob(job* h, job* novo);
-job* InserirOperacao(operacao* h, job* processo);
+job* InserirOperacao(job* processo, operacao* h);
 operacao* inserirMaq(operacao* h, Maq* m);
 operacao* RemoveOperacao(operacao* h, int op);
 operacao* ProcuraOperacao(operacao* h, int op);
